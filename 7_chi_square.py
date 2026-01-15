@@ -27,7 +27,7 @@ def chi_square_test(matrix):
     # -------- Chi-square calculation --------
     chi_val = 0
     for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
+        for j in range(len(matrix[0])):
             chi_val += ((matrix[i][j] - expected_matrix[i][j]) ** 2) / expected_matrix[i][j]
 
     # -------- Degrees of freedom --------
