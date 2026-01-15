@@ -19,7 +19,7 @@ def chi_square_test(matrix):
     expected_matrix = []
     for i in range(len(matrix)):
         expected_row = []
-        for j in range(len(matrix[i])):
+        for j in range(len(matrix[0])):
             e_val = (rows[i] * cols[j]) / total_sum
             expected_row.append(e_val)
         expected_matrix.append(expected_row)
@@ -40,10 +40,10 @@ def chi_square_test(matrix):
     sd_est = chi_val ** 0.5
 
     # -------- Output --------
-    print("\nChi-Square Statistic:", round(chi_val, 3))
+    print("\nChi-Square Statistic:", chi_val)
     print("Degrees of Freedom:", df)
     print("Critical Value (α = 0.05):", crit_val)
-    print("Approx Std Dev:", round(sd_est, 3))
+    print("Approx Std Dev:", sd_est)
 
     if chi_val > crit_val:
         print("Decision: Reject Null Hypothesis (Significant)")
