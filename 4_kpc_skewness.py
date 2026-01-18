@@ -62,6 +62,7 @@ for i in range(n):
 
 print("Mean:", calcMean(num, n))
 print("Median:", calcMedian(num, n))
+print("Mode:",calcMode(num))
 print("Standard Deviation:", calcStdDev(num, calcMean(num, n)))
 print("Karl Pearson's Coefficient of Skewness:", calcSkewness(num))
 

@@ -8,10 +8,9 @@ print("Enter data values:")
 for i in range(n):
     val = int(input())
     data.append(val)
-    total += val
 
 # Mean
-mean = total / n
+mean = sum(data) / n
 
 # Median
 data.sort()
