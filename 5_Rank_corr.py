@@ -26,12 +26,11 @@ def spearmanRankCorrelation(x, y):
     ry = rankData(y)
 
     # Calculate d² using simple loop
-    d2_sum = 0
+    d=0
     for i in range(n):
-        d = rx[i] - ry[i]
-        d2_sum = d2_sum + (d ** 2)
+        d += ((rx[i] - ry[i])**2)
 
-    return 1 - (6 * d2_sum) / (n * ((n ** 2) - 1))
+    return 1 - (6 * d) / (n * ((n ** 2) - 1))
 
 
 # Main Program
